@@ -12,4 +12,4 @@ RUN dotnet publish -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-ENTRYPOINT ["dotnet", "Video_Downloader_for_Facebook.dll"]
+ENTRYPOINT ["sh", "-c", "dotnet $(ls *.dll | head -n 1)"]
