@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Facebook Video Downloader";
+}
+
+<style>
+    body {
+        background: #f0f2f5;
+        font-family: sans-serif;
+    }
+
+    .container-main {
+        max-width: 700px;
+        margin: 60px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #1877f2;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 14px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+        button:hover {
+            background: #166fe5;
+        }
+
+    .error {
+        background: #ffebe9;
+        color: #d93025;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .howto {
+        text-align: left;
+        margin-top: 30px;
+        color: #555;
+        font-size: 14px;
+    }
+</style>
+
+<div class="container-main">
+    <h1>📥 Facebook Video Downloader</h1>
+    <p>Download Facebook Reels & Videos in HD</p>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="error">@ViewBag.Error</div>
+    }
+
+    <form method="post" action="/Downloader/GetVideo">
+        <input type="text" name="url" placeholder="Paste Facebook video link here..." required />
+        <button type="submit">Get Video</button>
+    </form>
+
+    <div class="howto">
+        <h3>How to use:</h3>
+        <p>1. Copy Facebook video link (Reel, Watch, Page)</p>
+        <p>2. Paste it above and click Get Video</p>
+        <p>3. Choose HD or SD and download - no watermark</p>
+    </div>
+</div>

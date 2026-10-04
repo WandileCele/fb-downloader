@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37411.7 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video Downloader for Facebook", "Video Downloader for Facebook.csproj", "{048C79AB-E025-453A-BF58-CC1D2C78619B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{048C79AB-E025-453A-BF58-CC1D2C78619B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048C79AB-E025-453A-BF58-CC1D2C78619B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048C79AB-E025-453A-BF58-CC1D2C78619B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048C79AB-E025-453A-BF58-CC1D2C78619B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A54E3964-D67E-4F5E-B138-E27D5C3DF2F4}
+	EndGlobalSection
+EndGlobal

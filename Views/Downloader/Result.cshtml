@@ -1,0 +1,76 @@
+﻿@using Video_Downloader_for_Facebook.Services
+@model FacebookVideo
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Ready to Download";
+}
+
+<style>
+    body {
+        background: #f0f2f5;
+        font-family: sans-serif;
+    }
+
+    .container-main {
+        max-width: 600px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    img.thumb {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        margin: 8px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .btn-hd {
+        background: #22c55e;
+    }
+
+        .btn-hd:hover {
+            background: #16a34a;
+        }
+
+    .btn-sd {
+        background: #333;
+    }
+
+        .btn-sd:hover {
+            background: #111;
+        }
+
+    .back {
+        display: inline-block;
+        margin-top: 20px;
+        color: #1877f2;
+        text-decoration: none;
+    }
+</style>
+
+<div class="container-main">
+    <img class="thumb" src="@Model.ThumbnailUrl" />
+    <h2 style="margin: 20px 0 5px">@Model.Title</h2>
+    <p style="color: #666;">Duration: @Model.Duration seconds</p>
+
+    <div style="margin-top: 25px;">
+        <a class="btn btn-hd" href="/Downloader/DownloadFile?url=@Uri.EscapeDataString(Model.HdUrl)&filename=@Uri.EscapeDataString(Model.Title)">⬇️ Download HD (720p)</a>
+        <a class="btn btn-sd" href="/Downloader/DownloadFile?url=@Uri.EscapeDataString(Model.SdUrl)&filename=@Uri.EscapeDataString(Model.Title)">⬇️ Download SD (360p)</a>
+    </div>
+
+    <a class="back" href="/Downloader">← Download Another Video</a>
+</div>
