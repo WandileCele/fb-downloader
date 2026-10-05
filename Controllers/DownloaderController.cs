@@ -38,7 +38,7 @@ public class DownloaderController : Controller
 
         if (video == null)
         {
-            ViewBag.Error = "Could not fetch video. Make sure it's public and yt-dlp is installed.";
+            ViewBag.Error = "Could not fetch video. Make sure it's public!";
             return View("Index");
         }
 
