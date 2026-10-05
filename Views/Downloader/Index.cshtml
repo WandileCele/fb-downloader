@@ -1,13 +1,26 @@
 ﻿@{
     Layout = null;
-    ViewData["Title"] = "Facebook Video Downloader";
+    ViewData["Title"] = "Facebook Video Downloader - Free, No Login, HD";
 }
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facebook Video Downloader - Download Facebook Reels & Videos in HD</title>
+    <title>Facebook Video Downloader - Free FB Video Downloader HD, No Watermark</title>
+
+    <!-- SEO META - THIS IS WHAT MAKES YOU RANK -->
+    <meta name="description" content="Best free Facebook Video Downloader 2026. Download Facebook videos, Reels, Stories & Watch in HD 1080p MP4 without watermark. No login, no app needed. Works on Android, iPhone, PC. Fast FB downloader South Africa." />
+    <meta name="keywords" content="facebook video downloader, fb video downloader, download facebook video, facebook reels downloader, download fb video, fb downloader, facebook video download" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fb-downloader-ala2.onrender.com/" />
+
+    <!-- Open Graph for Facebook share -->
+    <meta property="og:title" content="Facebook Video Downloader - Free & Fast" />
+    <meta property="og:description" content="Download any Facebook video in HD without watermark. No login needed." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fb-downloader-ala2.onrender.com/" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S22LGJLK0K"></script>
     <script>
@@ -16,74 +29,105 @@
         gtag('js', new Date());
         gtag('config', 'G-S22LGJLK0K');
     </script>
+
+    <!-- FAQ Schema - Google loves this -->
+    <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org",
+        "@@type": "FAQPage",
+        "mainEntity": [{
+        "@@type": "Question",
+        "name": "How to download Facebook videos?",
+        "acceptedAnswer": { "@@type": "Answer", "text": "Copy Facebook video link, paste it in our Facebook video downloader above, click Get Video, choose HD or SD quality and download." }
+        },{
+        "@@type": "Question",
+        "name": "Is Facebook video downloader free?",
+        "acceptedAnswer": { "@@type": "Answer", "text": "Yes, 100% free, no login, no watermark, no limit." }
+        },{
+        "@@type": "Question",
+        "name": "Can I download Facebook Reels and Stories?",
+        "acceptedAnswer": { "@@type": "Answer", "text": "Yes, our tool supports Facebook Videos, Reels, Stories, Watch and private group public videos in HD 1080p MP4." }
+        }]
+        }
+    </script>
 </head>
 <body>
     <style>
         body {
-            background: #f0f2f5;
-            font-family: sans-serif;
-            margin: 0;
+        background: #f0f2f5;
+        font-family: sans-serif;
+        margin: 0;
         }
 
         .container-main {
-            max-width: 700px;
-            margin: 60px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            text-align: center;
+        max-width: 700px;
+        margin: 60px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
         }
 
         h1 {
-            color: #1877f2;
+        color: #1877f2;
         }
 
         input[type=text] {
-            width: 100%;
-            padding: 14px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            box-sizing: border-box;
+        width: 100%;
+        padding: 14px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box;
         }
 
         button {
-            width: 100%;
-            padding: 14px;
-            background: #1877f2;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
+        width: 100%;
+        padding: 14px;
+        background: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
         }
 
-            button:hover {
-                background: #166fe5;
-            }
+        button:hover {
+        background: #166fe5;
+        }
 
         .error {
-            background: #ffebe9;
-            color: #d93025;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+        background: #ffebe9;
+        color: #d93025;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 15px;
         }
 
         .howto {
-            text-align: left;
-            margin-top: 30px;
-            color: #555;
-            font-size: 14px;
+        text-align: left;
+        margin-top: 30px;
+        color: #555;
+        font-size: 14px;
+        line-height: 1.6;
+        }
+
+        .seo-text {
+        text-align: left;
+        margin-top: 30px;
+        color: #444;
+        font-size: 15px;
+        line-height: 1.6;
         }
     </style>
 
     <div class="container-main">
         <h1>📥 Facebook Video Downloader</h1>
-        <p>Download Facebook Reels & Videos in HD</p>
+        <h2 style="font-size:18px; color:#555; font-weight:normal;">Download Facebook Videos, Reels & Stories in HD 1080p - Free, No Watermark, No Login</h2>
+        <p>Fastest free FB video downloader online - works on Android, iPhone & PC</p>
 
         @if (ViewBag.Error != null)
         {
@@ -95,21 +139,39 @@
             <button type="submit">Get Video</button>
         </form>
 
-        <div style="margin-top:30px; padding:20px; background:#f0f9ff; border-radius:10px; border-left:4px solid #0ea5e9;">
+        <div style="margin-top:30px; padding:20px; background:#f0f9ff; border-radius:10px; border-left:4px solid #0ea5e9; text-align:left;">
             <h3>✅ Safe & Secure - No Login Needed</h3>
-            <p><b>We never ask for your Facebook password.</b> Just paste public video link.</p>
+            <p><b>We never ask for your Facebook password.</b> This Facebook video downloader is 100% safe and secure. Just copy the public video URL and download in HD MP4 without watermark.</p>
             <ul>
-                <li>🔒 No Facebook login required</li>
-                <li>💧 No watermark</li>
-                <li>🗑️ We don't store your videos</li>
+                <li>🔒 No Facebook login required - safe FB downloader</li>
+                <li>💧 No watermark on downloaded Facebook videos</li>
+                <li>🗑️ We don't store your Facebook videos or links</li>
+                <li>📱 Works on Android, iPhone, PC, Tablet</li>
+                <li>⚡ Download FB Reels, Stories, Watch in HD 1080p</li>
             </ul>
         </div>
 
         <div class="howto">
-            <h3>How to use:</h3>
-            <p>1. Copy Facebook video link (Reel, Watch, Page)</p>
-            <p>2. Paste it above and click Get Video</p>
-            <p>3. Choose HD or SD and download - no watermark</p>
+            <h3>How to Download Facebook Videos:</h3>
+            <p><b>Step 1:</b> Copy Facebook video link from app or website (Reel, Watch, Page, Story)</p>
+            <p><b>Step 2:</b> Paste it in the Facebook video downloader box above</p>
+            <p><b>Step 3:</b> Click Get Video, choose HD or SD quality and download - no watermark</p>
+        </div>
+
+        <div class="seo-text">
+            <h3>Best Free Facebook Video Downloader 2026</h3>
+            <p>Looking for a <b>Facebook video downloader</b> that is free, fast and safe? Our <b>FB video downloader</b> lets you download any public Facebook video, Facebook Reels, Facebook Stories and Facebook Watch videos in HD 1080p MP4 quality. Unlike other tools, our <b>Facebook reels downloader</b> has no watermark, no login, and no app installation needed.</p>
+            <p>Whether you want to <b>download Facebook videos</b> on Android, iPhone, or PC, our online Facebook video downloader works on all devices. Perfect for South Africa and worldwide. Just paste your FB video URL and get your video in 2 seconds.</p>
+
+            <h3>FAQ - Facebook Video Downloader</h3>
+            <h4>How to download Facebook videos for free?</h4>
+            <p>Use our free Facebook video downloader above. Copy FB video URL, paste, click Get Video. No payment needed.</p>
+            <h4>Can I download Facebook Reels in HD?</h4>
+            <p>Yes, our Facebook Reels downloader supports Reels, Videos, Stories in HD 1080p without watermark.</p>
+            <h4>Is this Facebook video downloader safe?</h4>
+            <p>Yes, 100% safe. We never ask for Facebook password. No login, no data stored. The most secure FB downloader.</p>
+            <h4>Do I need to install an app to download FB videos?</h4>
+            <p>No, our Facebook video downloader online works directly in browser on Android, iOS and PC.</p>
         </div>
     </div>
     <div style="text-align:center; padding:20px; margin-top:50px; border-top:1px solid #ddd; background:#f9f9f9; font-family:Arial;">
@@ -117,7 +179,7 @@
         <a href="/About.html">About Us</a> |
         <a href="/Contact.html">Contact Us</a>
         <br><br>
-        <span>© 2026 FB Downloader</span>
+        <span>© 2026 FB Downloader - Free Facebook Video Downloader No Watermark</span>
     </div>
 </body>
 </html>
